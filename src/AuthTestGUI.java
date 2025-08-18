@@ -37,7 +37,7 @@ public class AuthTestGUI extends JFrame {
         // Print classpath for auditability
         System.out.println("Classpath: " + System.getProperty("java.class.path"));
 
-        // 🔍 Confirm JDBC driver is loaded
+        // Confirm JDBC driver is loaded
         try {
             Driver driver = DriverManager.getDriver("jdbc:postgresql://127.0.0.1:5432/gcashdb");
             System.out.println("JDBC Driver loaded: " + driver.getClass().getName());
@@ -45,7 +45,7 @@ public class AuthTestGUI extends JFrame {
             System.out.println("No suitable JDBC driver: " + e.getMessage());
         }
 
-        // 🔗 Attempt DB connection
+        // Attempt DB connection
         try {
             conn = DriverManager.getConnection(
                     "jdbc:postgresql://127.0.0.1:5432/gcashdb", "postgres", "new_secure_password");
