@@ -1,0 +1,68 @@
+﻿# GcashApp1
+
+A command-line banking application built in Java for a school project. This app simulates basic GCash-like functionality including user login and balance inquiry, with a focus on modular design, reproducibility, and auditability.
+
+---
+
+## Features
+
+- User Login: Authenticates users via JDBC connection to a PostgreSQL database.
+- Balance Inquiry: Displays current user balance after successful login.
+- Modular Structure: Organized for future expansion (e.g., send money, transaction history).
+- Database Integration: Uses relational tables with foreign key constraints for integrity.
+
+---
+
+## Technologies Used
+
+| Tool/Tech     | Purpose                          |
+|---------------|----------------------------------|
+| Java          | Core application logic           |
+| JDBC          | Database connectivity            |
+| PostgreSQL    | User and balance data storage    |
+| IntelliJ IDEA | Development environment          |
+| Git & GitHub  | Version control and audit trail  |
+| PowerShell    | CLI testing and script execution |
+
+---
+
+## How to Run
+
+1. Clone the repo  
+   `ash
+   git clone https://github.com/Vergel1231/GcashApp1.git
+   cd GcashApp1
+2. Set up PostgreSQL schema
+   Create users and balance tables.Ensure foreign key constraints are in place.
+3. Compile and run the app
+   Use IntelliJ or CLI:
+   javac Main.java
+   java Main
+4. Login and view balance
+   Follow CLI prompts to authenticate and retrieve balance.
+
+---
+
+## Milestone Tags
+
+| Tag                    | Description
+|------------------------|------------------------------|
+| v0.1-login-flow        | Initial login implementation |
+| v0.2-balance-inquiry   | Balance feature added        |
+| v0.3-schema-update     | DB schema changes            |
+
+---
+
+## Notes
+
+- This project is part of a school requirement and will be expanded later for portfolio use.
+- All code and documentation are written with future auditability in mind.
+- Contributions are currently disabled until project completion.
+
+---
+
+## Author
+
+Ver
+Focused on reproducible workflows, CLI-first development, and modular banking logic.
+Committed to clarity, control, and continuous improvement.
