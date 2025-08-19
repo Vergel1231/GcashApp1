@@ -1,4 +1,4 @@
-package com.gcash.banking;
+package src.com.gcash.banking;
 
 import javax.swing.*;
 import java.awt.*;
