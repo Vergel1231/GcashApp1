@@ -29,11 +29,10 @@ A command-line banking application built in Java for a school project. This app 
 ## How to Run
 
 1. Clone the repo  
-   `ash
    git clone https://github.com/Vergel1231/GcashApp1.git
    cd GcashApp1
 2. Set up PostgreSQL schema
-   Create users and balance tables.Ensure foreign key constraints are in place.
+   Create users and balance tables. Ensure foreign key constraints are in place.
 3. Compile and run the app
    Use IntelliJ or CLI:
    javac Main.java
