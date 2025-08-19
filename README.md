@@ -60,6 +60,22 @@ A command-line banking application built in Java for a school project. This app 
 
 ---
 
+## Transaction Table
+
+The `Transaction` table records all monetary actions within the system. It is designed for simplicity and educational clarity, without enforcing foreign key constraints.
+
+| Column           | Type             | Description                                  |
+|------------------|------------------|----------------------------------------------|
+| `ID`             | `SERIAL`         | Unique transaction identifier                |
+| `amount`         | `NUMERIC(12,2)`  | Transaction amount                           |
+| `name`           | `VARCHAR(100)`   | Description or label for the transaction     |
+| `account_ID`     | `INT`            | ID of the account initiating the transaction |
+| `date`           | `TIMESTAMP`      | Timestamp of transaction (auto-generated)    |
+| `transferToID`   | `INT`            | Destination account ID (if applicable)       |
+| `transferFromID` | `INT`            | Source account ID (if applicable)            |
+
+> Note: Foreign key constraints were intentionally omitted to simplify the schema for academic purposes.
+
 ## Author
 
 Ver
