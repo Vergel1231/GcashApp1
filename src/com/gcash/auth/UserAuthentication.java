@@ -1,4 +1,4 @@
-package com.gcash.auth;
+package src.com.gcash.auth;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
