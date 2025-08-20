@@ -76,6 +76,16 @@ The `Transaction` table records all monetary actions within the system. It is de
 
 > Note: Foreign key constraints were intentionally omitted to simplify the schema for academic purposes.
 
+---
+
+### CashIn GUI Flow Validated
+- Resolved `account_number` to `user_id` via JDBC
+- Enforced unique balance row per user
+- Updated balance and logged transaction
+- GUI confirmed success with real-time feedback
+
+---
+
 ## Author
 
 Ver
