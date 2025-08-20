@@ -86,6 +86,20 @@ The `Transaction` table records all monetary actions within the system. It is de
 
 ---
 
+## Cash Transfer Logic Validated
+
+The `CashTransferGUI` flow has been fully tested and validated for both schema alignment and input enforcement:
+
+- **Receiver Validation**: GUI rejects nonexistent `account_number` with clear error messaging.
+- **Amount Validation**: Rejects empty, non-numeric, or negative amounts via GUI-side checks.
+- **Transaction Logging**: Successful transfers are recorded in the `Transaction` table with accurate `transferFromID` and `transferToID` mappings.
+- **Balance Update**: Sender’s and receiver’s balances are updated atomically, preserving one-to-one mapping in the `Balance` table.
+- **Audit Trail**: All logic paths are documented and milestone-tagged for reproducibility.
+
+> Milestone tagged as `v0.4-cash-transfer-validation`
+
+---
+
 ## Author
 
 Ver
