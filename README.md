@@ -99,6 +99,11 @@ The `CashTransferGUI` flow has been fully tested and validated for both schema a
 > Milestone tagged as `v0.4-cash-transfer-validation`
 
 ---
+## Transaction Module Completed
+
+Implemented `viewAll`, `viewUserAll`, and `viewTransaction` methods in `Transactions.java`. Integrated with `TransactionViewerGUI` for GUI-based testing. JDBC queries validated via PostgreSQL. Milestone tagged as `v0.5-transaction-viewer`.
+
+---
 
 ## Author
 
