@@ -105,6 +105,66 @@ Implemented `viewAll`, `viewUserAll`, and `viewTransaction` methods in `Transact
 
 ---
 
+# Milestone: Final Integration and CLI Validation
+
+## Date: August 23, 2025
+## Contributor: Virgilio
+## Context: Final task execution and CLI validation for GcashApp
+
+---
+
+## Summary of Work Completed
+
+- **Verified all module `.java` files** against instructor specs:
+    - `UserAuthentication.java`: login, register, change PIN, logout
+    - `CashIn.java`: cash-in with transaction logging
+    - `CashTransfer.java`: validated transfer logic with rollback
+    - `CheckBalance.java`: static balance check method + GUI wrapper
+    - `Transactions.java`: viewAll, viewUserAll, viewTransaction
+
+- **Integrated all modules into `Main.java`** with CLI-driven flow:
+    - Login using account number and PIN
+    - Menu-driven options for balance check, cash-in, transfer, and transaction history
+    - Loop until logout with confirmation prompts
+
+- **Validated CLI functionality** using test credentials:
+    - Logged in as user ID `4` (`9876543210`, PIN `5678`)
+    - Seeded `balance` table manually to enable cash-in
+    - Confirmed balance update and transaction logging
+    - Verified transfer logic and error handling
+
+- **Resolved edge cases**:
+    - Login failure due to incorrect PIN
+    - Transfer failure due to invalid account number
+    - Cash-in rollback due to missing balance row
+    - PostgreSQL sequence sync for `balance.id`
+
+---
+
+## Test Data Used
+
+```sql
+-- Users
+INSERT INTO users (name, email, account_number, pin) VALUES ('Virgilio', 'virgilio@example.com', '1234567890', '4321');
+INSERT INTO users (name, email, account_number, pin) VALUES ('Test User', 'test2@example.com', '9876543210', '5678');
+
+-- Balance
+INSERT INTO balance (user_id, amount) VALUES (1, 1000000.00);
+INSERT INTO balance (user_id, amount) VALUES (4, 0.00);
+
+---
+
+## Notes
+All JDBC operations use prepared statements
+
+Transactions are atomic and rollback on failure
+
+GUI wrappers are available but CLI was prioritized for final validation
+
+This milestone completes the final task: Create Online Banking Program
+
+---
+
 ## Author
 
 Ver
