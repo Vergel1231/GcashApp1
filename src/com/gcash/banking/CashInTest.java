@@ -1,4 +1,6 @@
-package src.com.gcash.banking;
+package com.gcash.banking;
+
+import com.gcash.db.DBConnection;
 
 import java.math.BigDecimal;
 import java.sql.Connection;

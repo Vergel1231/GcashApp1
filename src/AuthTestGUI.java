@@ -61,7 +61,7 @@ public class AuthTestGUI extends JFrame {
         String account = accountField.getText().trim();
         String pin = new String(pinField.getPassword()).trim();
 
-        int userId = src.com.gcash.auth.UserAuthentication.loginUser(conn, account, pin);
+        int userId = com.gcash.auth.UserAuthentication.loginUser(conn, account, pin);
 
         if (userId > 0) {
             resultLabel.setText("Login successful. ID: " + userId);

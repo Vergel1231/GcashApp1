@@ -1,4 +1,4 @@
-package com.gcash.banking;
+package com.gcash.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
